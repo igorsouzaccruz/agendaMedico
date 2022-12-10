@@ -24,12 +24,11 @@ public class Agenda {
         boolean disponibilidade = true;
 
         for(Consulta consult: this.consultas) { 
-              
+
             if(consult.equals(consulta)){
                 disponibilidade = false;
             }
         }; 
-
         return disponibilidade;        
     }
 }

@@ -4,27 +4,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entities.Consulta;
+import entities.exceptions.ConsultaException;
 
 public class Agenda {
     
     List<Consulta> consultas = new ArrayList<Consulta>();
 
-    public void adicionar(Consulta consulta){
+    public void adicionar(Consulta consulta){    
+
+        if(disponibilidade(consulta)){ 
+            this.consultas.add(consulta);
+            System.out.println("Add success");
+        } else {
+            throw new ConsultaException("Horário Ocupado!");
+        }
     }
 
-    public boolean disponibilidade(Consulta consulta){
+    private boolean disponibilidade(Consulta consulta){
+        boolean disponibilidade = true;
 
-        this.consultas.add(new Consulta(0, 0, 0, 0, 
-        null));
-        
-        Boolean disponibilidade = true;
-        
-        for(Consulta consult: this.consultas) {      
-
-            if(consulta.getDia() == consult.getDia() 
-            || consulta.getMes() == consult.getMes()
-            || consulta.getAno() == consult.getAno()
-            || consulta.getHora() == consult.getHora()){
+        for(Consulta consult: this.consultas) { 
+              
+            if(consult.equals(consulta)){
                 disponibilidade = false;
             }
         }; 

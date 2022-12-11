@@ -13,7 +13,18 @@ public class Agenda {
     public void adicionar(Consulta consulta) {
             confirmar(consulta);
             this.consultas.add(consulta);
-            System.out.println("Add success");
+            System.out.println("Adicionado com Sucesso!");
+    }
+
+    public void realizar(Consulta consulta){
+        if(consulta.getStatus() == 1) {
+            consulta.setStatus(2);
+            System.out.println("Realizado");
+        } else if (consulta.getStatus() != 1) {
+            throw new ConsultaException("Status Inválido");
+        } else {
+            throw new ConsultaException("Consulta não encontrada");
+        }
     }
 
     private void confirmar(Consulta consulta) {
@@ -21,7 +32,7 @@ public class Agenda {
             if (consulta.getStatus() == 0) {
                 consulta.setStatus(1);
                 System.out.println("Confirmado");
-            } else if (consulta.getStatus() == 1) {
+            } else if (consulta.getStatus() > 0) {
                 throw new ConsultaException("Status Inválido");
             } else {
                 throw new ConsultaException("Consulta não encontrada");
@@ -40,7 +51,6 @@ public class Agenda {
                 disponibilidade = false;
             }
         }
-        
         return disponibilidade;
     }
 }

@@ -10,9 +10,6 @@ public class Consulta {
 
     private Paciente paciente;
 
-    public Consulta(){
-    }
-
     public Consulta(int dia, int mes, int ano, int hora, Paciente paciente) {
         this.dia = dia;
         this.mes = mes;

@@ -4,11 +4,12 @@ dias de 8 as 12 hs e de 13 as 19 hs. Suas consultas possuem a duração de 1 h. 
 
 <p>0) Se a aplicação for desenvolvida na forma gráfica utilizando a biblioteca javax.swing</p>
 <p>1) Crie a classe Paciente, com seu construtor, getters e setters </p>
-![image](https://user-images.githubusercontent.com/88636711/206925324-b0d26ac5-a2f8-4ba6-9bc1-6451349169ac.png)
+![Capturar](https://user-images.githubusercontent.com/88636711/206925414-30b7986f-8d51-4351-82e0-2eab0d63947c.PNG)
+
 <p>2) Crie a Classe Consulta, com seu construtor, getters e setters. Note que o construtor deve iniciar o
 atributo Status com o valor 0 (zero) que indica que a consulta esta marcada.</p>
 Consulta
-![image](https://user-images.githubusercontent.com/88636711/206925309-59633655-89f4-464d-a37d-f295276b1f5c.png)
+![Capturar2](https://user-images.githubusercontent.com/88636711/206925418-e0c0f470-c139-41ac-acb6-8a255246f254.PNG)
 
 <p>3) Crie a classe Agenda que </p>
 <p>a) Possua um atributo ArrayList<Consulta> lista; </p>

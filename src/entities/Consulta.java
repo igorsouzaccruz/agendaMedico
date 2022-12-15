@@ -19,7 +19,15 @@ public class Consulta {
         this.status = 0;
     }
 
-    public void mostrar() {
+    public String mostrar(){
+        return "Consulta{" +
+                "dia=" + dia +
+                ", mes=" + mes +
+                ", ano=" + ano +
+                ", hora=" + hora +
+                ", status=" + status +
+                ", paciente=" + paciente.mostrar() +
+                '}';
     }
 
     public int getDia() {

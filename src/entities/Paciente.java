@@ -17,7 +17,13 @@ public class Paciente {
         this.telefone = telefone;
     }
 
-    public void mostrar() {
+    public String mostrar(){
+        return "Paciente{" +
+                "nome='" + nome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", telefone='" + telefone + '\'' +
+                '}';
     }
 
     public String getNome() {
